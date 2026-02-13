@@ -59,11 +59,18 @@
                 animation-delay: 10.5s;
             }
 
+            .text:nth-child(5) {
+                font-size: 2rem; /* Dimensione speciale per "Samuela + Saro" */
+                font-family: 'Pacifico', cursive; /* Font Pacifico */
+                color: #ff4d6d; /* Colore rosa acceso */
+                animation-delay: 13.5s;
+            }
+
         .gif-container {
             margin-top: 20px;
             opacity: 0;
             animation: fadeInGif 3s ease forwards;
-            animation-delay: 13.5s;
+            animation-delay: 16.5s;
         }
 
             .gif-container img {
@@ -118,6 +125,10 @@
                     font-size: 2rem; /* Riduce la dimensione di "TI amo" */
                 }
 
+                .text:nth-child(5) {
+                    font-size: 1.8rem; /* Riduce la dimensione di "Samuela + Saro" */
+                }
+
             .gif-container img {
                 width: 250px; /* Riduce la dimensione della GIF */
             }
@@ -125,11 +136,18 @@
     </style>
 </head>
 <body>
+    <!-- Audio di sottofondo -->
+    <audio autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Il tuo browser non supporta l'elemento audio.
+    </audio>
+
     <section class="section-container">
         <div class="text">Non ci credo che ci conosciamo già da un mese.</div>
         <div class="text"><span class="bold">Sappi che sono ogni giorno più fiero e orgoglioso di te.</span></div>
         <div class="text">Sei la mia piccolina 💖</div>
         <div class="text">TI amo</div>
+        <div class="text">Samuela + Saro = 💖</div>
         <div class="gif-container">
             <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnp2MGQybHQ0azVhaTExbmRycjdoMzljbWZoNWl5ejV3c2R5c2czNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/iGqP4DYXe4zVJbCY5N/giphy.gif" alt="GIF Animato">
         </div>

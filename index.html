@@ -1,12 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise</title>
+    <title>Sorpresa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ff758c, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            animation: backgroundShift 8s infinite alternate;
+        }
+
+        .section-container {
+            background: rgba(255, 182, 193, 0.8); /* Rosa chiaro con trasparenza */
+            border-radius: 20px; /* Bordo arrotondato */
+            padding: 20px 30px; /* Spaziatura interna */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+            text-align: center;
+            max-width: 600px; /* Larghezza massima */
+            width: 90%; /* Adattabile a schermi più piccoli */
+        }
+
+        .text {
+            font-size: 1.8rem; /* Ridimensionato per adattarsi */
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 3s ease forwards;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Ombra al testo */
+        }
+
+            .text:nth-child(1) {
+                color: red;
+                animation-delay: 1.5s;
+            }
+
+            .text:nth-child(2) {
+                color: white;
+                animation-delay: 4.5s;
+            }
+
+            .text:nth-child(3) {
+                color: red;
+                animation-delay: 7.5s;
+            }
+
+            .text:nth-child(4) {
+                font-size: 2.5rem; /* Dimensione maggiore per "TI amo" */
+                font-family: 'Pacifico', cursive; /* Font Pacifico */
+                color: white;
+                animation-delay: 10.5s;
+            }
+
+        .gif-container {
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInGif 3s ease forwards;
+            animation-delay: 13.5s;
+        }
+
+            .gif-container img {
+                width: 300px;
+                height: auto;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombra alla GIF */
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+                .gif-container img:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Ombra più intensa al passaggio del mouse */
+                }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInGif {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes backgroundShift {
+            0% {
+                background: linear-gradient(135deg, #ff758c, #fad0c4);
+            }
+
+            100% {
+                background: linear-gradient(135deg, #fad0c4, #ff758c);
+            }
+        }
+
+        /* Media Query per dispositivi mobili */
+        @media (max-width: 480px) {
+            .section-container {
+                padding: 15px 20px; /* Riduce il padding per schermi piccoli */
+                max-width: 90%; /* Adatta la larghezza */
+            }
+
+            .text {
+                font-size: 1.5rem; /* Riduce la dimensione del testo */
+                line-height: 1.4; /* Riduce la spaziatura tra le righe */
+            }
+
+                .text:nth-child(4) {
+                    font-size: 2rem; /* Riduce la dimensione di "TI amo" */
+                }
+
+            .gif-container img {
+                width: 250px; /* Riduce la dimensione della GIF */
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Surprise page!</h1>
-    <p>This is the index page for our Surprise project.</p>
+    <section class="section-container">
+        <div class="text">Non ci credo che ci conosciamo già da un mese.</div>
+        <div class="text"><span class="bold">Sappi che sono ogni giorno più fiero e orgoglioso di te.</span></div>
+        <div class="text">Sei la mia piccolina 💖</div>
+        <div class="text">TI amo</div>
+        <div class="gif-container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnp2MGQybHQ0azVhaTExbmRycjdoMzljbWZoNWl5ejV3c2R5c2czNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/iGqP4DYXe4zVJbCY5N/giphy.gif" alt="GIF Animato">
+        </div>
+    </section>
 </body>
 </html>
